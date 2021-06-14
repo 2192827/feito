@@ -35,7 +35,7 @@ public class UserActivity extends AppCompatActivity implements TextToSpeech.OnIn
 
 
 
-
+//ja feito
 
 
     private DadosApp dadosApp;
