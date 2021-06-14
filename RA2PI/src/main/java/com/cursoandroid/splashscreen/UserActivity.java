@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
@@ -133,6 +132,7 @@ public class UserActivity extends AppCompatActivity implements TextToSpeech.OnIn
 
         respuestas.add( new Respuestas( "tereas", "",new Intent(this,activity_tarefas.class)));
 
+        respuestas.add( new Respuestas( "hablar", "",new Intent(this,spechtotext.class)));
 
         return respuestas;
     }
@@ -276,7 +276,7 @@ public class UserActivity extends AppCompatActivity implements TextToSpeech.OnIn
         listView = findViewById(R.id.listview);
 
         String[] values = new String[] {
-                "1. Qr CODE", "2. Microfone", "3. Tarefas"
+                "1. Qr CODE", "2. Microfone", "3. Tarefas", "3. spechtotext"
         };
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
@@ -299,6 +299,10 @@ public class UserActivity extends AppCompatActivity implements TextToSpeech.OnIn
                 }
                 if(position == 2){
                     listviewTarefas();
+                }
+                if(position == 3){
+                    Intent passo4 = new Intent(view.getContext(), spechtotext.class);
+                    startActivity(passo4);
                 }
             }
         });

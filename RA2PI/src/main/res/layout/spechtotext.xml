@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context="com.example.myapplication.Reconoc">
+
+    <ImageButton
+        android:id="@+id/img_btn_hablar"
+        android:layout_width="326dp"
+        android:layout_height="377dp"
+        android:background="@drawable/microfono"
+        android:contentDescription="@string/app_name"
+        android:onClick="onClickImgBtnHablar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtGrabarVoz"
+        app:layout_constraintVertical_bias="0.67" />
+
+    <TextView
+        android:id="@+id/txtGrabarVoz"
+        android:layout_width="365dp"
+        android:layout_height="130dp"
+        android:phoneNumber="false"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/img_btn_hablar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
